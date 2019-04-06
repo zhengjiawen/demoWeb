@@ -19,19 +19,19 @@ public class DeviceData {
     private String comment;
 
     private String devicePort;
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn
-    private DTUDevice dtuDevice;
+//    @ManyToOne(cascade = CascadeType.ALL)
+//    @JoinColumn
+//    private DTUDevice dtuDevice;
 
 
 
-    public DTUDevice getDtuDevice() {
-        return dtuDevice;
-    }
-
-    public void setDtuDevice(DTUDevice dtuDevice) {
-        this.dtuDevice = dtuDevice;
-    }
+//    public DTUDevice getDtuDevice() {
+//        return dtuDevice;
+//    }
+//
+//    public void setDtuDevice(DTUDevice dtuDevice) {
+//        this.dtuDevice = dtuDevice;
+//    }
 
     public Integer getId() {
         return id;
