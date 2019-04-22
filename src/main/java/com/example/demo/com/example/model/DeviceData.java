@@ -120,4 +120,21 @@ public class DeviceData {
     public void setDevicePort(String devicePort) {
         this.devicePort = devicePort;
     }
+
+    @Override
+    public String toString() {
+        return "DeviceData{" +
+                "id=" + id +
+                ", dataName='" + dataName + '\'' +
+                ", dataType='" + dataType + '\'' +
+                ", address='" + address + '\'' +
+                ", HH='" + HH + '\'' +
+                ", H='" + H + '\'' +
+                ", L='" + L + '\'' +
+                ", LL='" + LL + '\'' +
+                ", saveFreq='" + saveFreq + '\'' +
+                ", comment='" + comment + '\'' +
+                ", devicePort='" + devicePort + '\'' +
+                '}';
+    }
 }

@@ -18,7 +18,11 @@ public class DTUDDeviceController {
     @GetMapping(path = "/add")
     public @ResponseBody String addNewDevice(@RequestBody DTUDevice device)
     {
-        dtuDeviceService.addDevice(device);
+        DTUDevice savedDevice = dtuDeviceService.addDevice(device);
+        if( null == savedDevice)
+        {
+            return "saved failed";
+        }
         return "saved";
     }
 

@@ -23,7 +23,7 @@ public class DTUDevice {
     private String mangerPort;
     private String operationPort;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "dtuDevice")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "devicePort")
     private Set<DeviceData> deviceDataSet = new HashSet<>();
 
     public Set<DeviceData> getDeviceDataSet() {
@@ -122,5 +122,21 @@ public class DTUDevice {
         this.mangerPort = mangerPort;
     }
 
-
+    @Override
+    public String toString() {
+        return "DTUDevice{" +
+                "port='" + port + '\'' +
+                ", longtitude=" + longtitude +
+                ", latitude=" + latitude +
+                ", address='" + address + '\'' +
+                ", operationPhone='" + operationPhone + '\'' +
+                ", operationName='" + operationName + '\'' +
+                ", devicePhone='" + devicePhone + '\'' +
+                ", devicePhoneData=" + devicePhoneData +
+                ", manger='" + manger + '\'' +
+                ", mangerPort='" + mangerPort + '\'' +
+                ", operationPort='" + operationPort + '\'' +
+                ", deviceDataSet=" + deviceDataSet +
+                '}';
+    }
 }

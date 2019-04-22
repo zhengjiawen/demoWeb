@@ -16,10 +16,10 @@ public class DeviceDataController {
     private DeviceDataService deviceDataService;
 
     @GetMapping(path = "/add")
-    public @ResponseBody DeviceData addNewData(@RequestBody DeviceData deviceData)
+    public @ResponseBody String addNewData(@RequestBody DeviceData deviceData)
     {
-        DeviceData newData = deviceDataService.addData(deviceData);
-        return newData;
+        String message = deviceDataService.verfyData(deviceData);
+        return message;
     }
 
     @GetMapping(path = "/all")

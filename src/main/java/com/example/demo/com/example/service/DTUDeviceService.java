@@ -14,14 +14,14 @@ public class DTUDeviceService {
     @Autowired
     private DTUDeviceRepo dtuDeviceRepo;
 
-    public void addDevice(DTUDevice device)
+    public DTUDevice addDevice(DTUDevice device)
     {
-        dtuDeviceRepo.save(device);
+        return dtuDeviceRepo.save(device);
     }
 
-    public void updateDevice(DTUDevice device)
+    public DTUDevice updateDevice(DTUDevice device)
     {
-        dtuDeviceRepo.save(device);
+        return dtuDeviceRepo.save(device);
     }
 
     public void deleteDevice(DTUDevice device)
